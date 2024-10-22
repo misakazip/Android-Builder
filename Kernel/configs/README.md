@@ -1,8 +1,6 @@
 
 # Write kernel compilation configuration file
 
-English | [中文文档](./README.zh_CN.md)
-
 ## Basic configuration file case
 
 Each kernel compilation configuration file is a `Json` file ending with `.config.json`. The file is an array, and each `item` in the array is our kernel compilation configuration.

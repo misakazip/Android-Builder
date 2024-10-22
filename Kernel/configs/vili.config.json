@@ -2,8 +2,8 @@
     {
         "kernelSource": {
             "name": "Mi_11T_Pro",
-            "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm8350",
-            "branch": "14.0",
+            "repo": "https://github.com/LineageOS/android_kernel_oneplus_sm8350",
+            "branch": "lineage-21",
             "device": "vili",
             "defconfig": "defconfig"
         },

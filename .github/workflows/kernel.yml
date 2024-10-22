@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - ".github/workflows/kernel.yml"
+      - "Kernel/configs/**.config.json"
   workflow_dispatch:
 
 jobs:

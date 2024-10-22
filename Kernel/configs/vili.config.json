@@ -5,7 +5,7 @@
             "repo": "https://github.com/crdroidandroid/android_kernel_xiaomi_sm8350",
             "branch": "14.0",
             "device": "vili",
-            "defconfig": "arch/arm64/configs/defconfig"
+            "defconfig": "defconfig"
         },
         "toolchains": [
             {

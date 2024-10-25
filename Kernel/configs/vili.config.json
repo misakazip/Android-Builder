@@ -2,8 +2,8 @@
     {
         "kernelSource": {
             "name": "Mi_11T_Pro",
-            "repo": "https://github.com/felica-droid/android_kernel_xiaomi_sm8350",
-            "branch": "lineage-21",
+            "repo": "https://github.com/misakazip/Mi_11T_Pro-kernel",
+            "branch": "main",
             "device": "vili",
             "defconfig": "defconfig"
         },

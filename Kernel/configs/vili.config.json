@@ -5,7 +5,7 @@
             "repo": "https://github.com/misakazip/android_kernel_xiaomi_sm8350",
             "branch": "test",
             "device": "vili",
-            "defconfig": "defconfig"
+            "defconfig": "gki_defconfig"
         },
         "toolchains": [
             {

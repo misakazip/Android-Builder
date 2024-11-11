@@ -1,9 +1,9 @@
 [
     {
         "kernelSource": {
-            "name": "Mi_11T_Pro",
+            "name": "Mi_11T_Pro-KernelSU",
             "repo": "https://github.com/misakazip/Xiaomi_Kernel_OpenSource",
-            "branch": "vili",
+            "branch": "vili-KernelSU",
             "device": "vili",
             "defconfig": "gki_defconfig"
         },

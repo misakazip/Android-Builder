@@ -9,11 +9,11 @@
         },
         "toolchains": [
             {
-                "repo": "https://github.com/LineageOS/android_prebuilts_clang_kernel_linux-x86_clang-r416183b",
-                "branch": "lineage-20.0",
+                "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
+                "branch": "android11-release",
                 "name": "clang",
                 "binaryEnv": [
-                    "bin"
+                    "clang-stable/bin"
                 ]
             },
             {

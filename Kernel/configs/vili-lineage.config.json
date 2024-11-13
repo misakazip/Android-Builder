@@ -9,11 +9,11 @@
         },
         "toolchains": [
             {
-                "repo": "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86",
-                "branch": "android13-release",
+                "repo": "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r522817",
+                "branch": "14.0",
                 "name": "clang",
                 "binaryEnv": [
-                    "clang-stable/bin"
+                    "bin"
                 ]
             },
             {

@@ -1,9 +1,9 @@
-name: Build kernels
+name: Build kernels (Test)
 
 on:
   push:
     paths:
-      - ".github/workflows/kernel.yml"
+      - ".github/workflows/kernel-test.yml"
       - "Kernel/configs/**.config.json.test"
   workflow_dispatch:
 
@@ -86,9 +86,9 @@ jobs:
       # Add llvm repo and packages using a script 
       - name: 📦 Install llvm packages
         run: |
-          wget https://apt.llvm.org/llvm.sh
-          chmod +x llvm.sh
-          sudo ./llvm.sh 18 all
+          wget -qO- https://apt.llvm.org/llvm-snapshot.gpg.key | sudo tee /etc/apt/trusted.gpg.d/apt.llvm.org.asc
+          echo "deb [signed-by=/etc/apt/keyrings/apt.llvm.org.asc] http://apt.llvm.org/focal/ llvm-toolchain-focal-18 main" | sudo tee /etc/apt/sources.list.d/llvm.list > /dev/null
+          sudo apt-get update && sudo apt install clang-18 lldb-18 lld-18
 
 
       # Install prerequisites for Ubuntu

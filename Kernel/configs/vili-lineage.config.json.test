@@ -9,13 +9,6 @@
         },
         "toolchains": [
             {
-                "url": "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r522817/-/archive/15.0/android_prebuilts_clang_host_linux-x86_clang-r522817-15.0.zip",
-                "name": "clang",
-                "binaryEnv": [
-                    "bin"
-                ]
-            },
-            {
                 "repo": "https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9",
                 "branch": "android11-mainline-release",
                 "name": "aarch64",

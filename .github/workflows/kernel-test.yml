@@ -87,7 +87,6 @@ jobs:
       # Install prerequisites for Ubuntu
       - name: ⭐ Install prerequisites
         run: |
-          wget https://apt.llvm.org/llvm.sh && chmod +x llvm.sh && sudo ./llvm.sh all
           sudo apt-get update
           sudo apt-get install -y curl git ftp lftp wget libarchive-tools ccache python2 python2-dev python3
           sudo apt-get install -y pngcrush schedtool dpkg-dev liblz4-tool make optipng maven device-tree-compiler 
@@ -95,7 +94,7 @@ jobs:
           sudo apt-get install -y libxml2-utils libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools lzop flex tree
           sudo apt-get install -y build-essential bc gcc-aarch64-linux-gnu gcc-arm-linux-gnueabi libssl-dev libfl-dev
           sudo apt-get install -y pwgen libswitch-perl policycoreutils minicom libxml-sax-base-perl libxml-simple-perl 
-          sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar g++-multilib bison gperf zlib1g-dev automake libselinux1 libselinux1-dev clang lld
+          sudo apt-get install -y zip unzip tar gzip bzip2 rar unrar g++-multilib bison gperf zlib1g-dev automake libselinux1 libselinux1-dev
 
       # Initialize ccache
       - name: 🚄 Setup ccache
@@ -132,6 +131,18 @@ jobs:
           git clone --recursive --depth=1 -j $(nproc) --branch ${{ env.KERNEL_BRANCH }} ${{ env.KERNEL_REPO }} ${{ env.KERNEL_NAME }}
           # tree ${{ env.KERNEL_NAME }}
 
+      - name: 💫 Get toolchains
+        uses: actions/checkout@v4
+        with:
+          repository: 'https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r522817.git'
+          lfs: 'true'
+          path: 'clang'
+          
+      - name: Set path
+        run: |
+          echo "${{ env.WORKSPACE }}/clang/bin" >> $GITHUB_PATH
+
+        
       - name: 💫 Get toolchains
         env:
           toolchains: "${{ toJSON(matrix.CONFIG.toolchains) }}"
